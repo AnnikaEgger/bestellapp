@@ -1,6 +1,6 @@
 header,
 footer,
-.h2-container,
+.food-sections-seperator,
 .article-section {
   padding: var(--padding-content);
 }
@@ -78,7 +78,19 @@ main {
 footer {
   display: flex;
   justify-content: center;
-  gap: 64px;
+  align-items: center;
+  gap: 100px;
   height: 120px;
   background-color: var(--orange);
+}
+
+.copyright-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.copyright-container img {
+  width: 24px;
+  height: 24px;
 }

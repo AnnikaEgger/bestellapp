@@ -119,9 +119,13 @@ h1 span:first-child {
   font-size: 18px;
 }
 
-h2 {
+.food-sections-seperator h2 {
   font-size: 40px;
   color: white;
+}
+
+.pizza-cm {
+  font-weight: 400;
 }
 
 h3 {
@@ -147,4 +151,13 @@ h3 {
 footer {
   font-size: 18px;
   color: white;
+}
+
+.order-dialog {
+  color: var(--beige-light);
+}
+
+.order-dialog h2 {
+  font-size: 32px;
+  font-weight: 700;
 }

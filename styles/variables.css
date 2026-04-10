@@ -6,6 +6,7 @@
   --beige-light: rgba(253, 234, 220, 1);
 
   --padding-content: 0px max(calc(50% - 720px), 24px);
+  --padding-content-x: max(calc(50% - 720px), 24px);
 
   --border-radius-dish: 12px;
 }
