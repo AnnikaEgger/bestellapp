@@ -16,10 +16,11 @@
     <link rel="stylesheet" href="./styles/assets.css" />
     <link rel="stylesheet" href="style.css" />
 
+    <script src="./scripts/data.js"></script>
     <script src="scripts/templates.js"></script>
     <script src="script.js"></script>
   </head>
-  <body>
+  <body onload="renderItems()">
     <header>
       <img src="./assets/icons/logo-bestellapp.svg" alt="Bestell-App-Logo" />
       <img src="./assets/icons/menu-bar.svg" alt="Menü Bar" />
@@ -54,8 +55,8 @@
             <h2>Burger & Sandwiches</h2>
           </div>
 
-          <section class="article-section">
-            <article class="dish-container">
+          <section id="article-section--burger" class="article-section">
+            <!-- <article class="dish-container">
               <img
                 class="black-burger"
                 src="./assets/img/burger/black-burger.jpg"
@@ -133,7 +134,7 @@
                 </div>
                 <button class="add-to-basket-btn">Add to basket</button>
               </div>
-            </article>
+            </article> -->
           </section>
         </section>
 
@@ -143,8 +144,8 @@
             <h2>Pizza <span class="pizza-cm">(30cm)</span></h2>
           </div>
 
-          <section class="article-section">
-            <article class="dish-container">
+          <section id="article-section--pizza" class="article-section">
+            <!-- <article class="dish-container">
               <div class="zoom-img-container">
                 <img
                   class="margherita"
@@ -220,7 +221,7 @@
                 </div>
                 <button class="add-to-basket-btn">Add to basket</button>
               </div>
-            </article>
+            </article> -->
           </section>
         </section>
 
@@ -230,8 +231,8 @@
             <h2>Salad</h2>
           </div>
 
-          <section class="article-section">
-            <article class="dish-container">
+          <section id="article-section--salad" class="article-section">
+            <!-- <article class="dish-container">
               <div class="zoom-img-container">
                 <img
                   class="aragula-salad"
@@ -314,7 +315,7 @@
                 </div>
                 <button class="add-to-basket-btn">Add to basket</button>
               </div>
-            </article>
+            </article> -->
           </section>
         </section>
       </section>
