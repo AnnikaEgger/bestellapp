@@ -1,0 +1,84 @@
+header,
+footer,
+.h2-container,
+.article-section {
+  padding: var(--padding-content);
+}
+
+header {
+  position: fixed;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: var(--orange);
+  height: 120px;
+  z-index: 1;
+}
+
+main {
+  position: relative;
+}
+
+.hero {
+  height: 650px;
+  background-image: url(./assets/img/hero.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.burger-logo {
+  position: absolute;
+  top: 500px;
+
+  display: flex;
+  justify-self: center;
+}
+
+.headline-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.headline-rating-container {
+  display: flex;
+  align-items: center;
+
+  gap: 24px;
+}
+
+.subtitle {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.rating-box {
+  display: flex;
+  align-items: center;
+
+  padding: 0 4px;
+  gap: 8px;
+
+  background-color: var(--beige-dark);
+  border-radius: 4px;
+}
+
+.rating-box img {
+  height: 24px;
+  width: 24px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  gap: 64px;
+  height: 120px;
+  background-color: var(--orange);
+}

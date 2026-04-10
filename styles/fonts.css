@@ -1,0 +1,150 @@
+/* #region palanquin */
+/* palanquin-100 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Palanquin";
+  font-style: normal;
+  font-weight: 100;
+  src: url("../assets/fonts/palanquin-v17-latin-100.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* palanquin-200 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Palanquin";
+  font-style: normal;
+  font-weight: 200;
+  src: url("../assets/fonts/palanquin-v17-latin-200.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* palanquin-300 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Palanquin";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../assets/fonts/palanquin-v17-latin-300.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* palanquin-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Palanquin";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../assets/fonts/palanquin-v17-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* palanquin-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Palanquin";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../assets/fonts/palanquin-v17-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* palanquin-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Palanquin";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../assets/fonts/palanquin-v17-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* palanquin-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Palanquin";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../assets/fonts/palanquin-v17-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* #endregion */
+
+/* #region palanquin dark */
+/* palanquin-dark-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Palanquin Dark";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../assets/fonts/palanquin-dark-v17-latin-regular.woff2")
+    format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* palanquin-dark-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Palanquin Dark";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../assets/fonts/palanquin-dark-v17-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* palanquin-dark-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Palanquin Dark";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../assets/fonts/palanquin-dark-v17-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* palanquin-dark-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Palanquin Dark";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../assets/fonts/palanquin-dark-v17-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* #endregion */
+
+body {
+  font-family: "Palanquin";
+  color: var(--grey-dark);
+}
+
+h1 {
+  font-family: "Palanquin Dark";
+  font-size: 48px;
+  font-weight: 700;
+}
+
+h1 span:first-child {
+  color: var(--orange);
+}
+
+.rating-box p:nth-child(2) {
+  font-family: "Palanquin Dark";
+  font-size: 20px;
+}
+
+.rating-box p:nth-child(3) {
+  color: var(--grey-light);
+  font-size: 18px;
+}
+
+h2 {
+  font-size: 40px;
+  color: white;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.dish-price {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.dish-components {
+  font-weight: 500;
+}
+
+.add-to-basket-btn {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--grey-dark);
+}
+
+footer {
+  font-size: 18px;
+  color: white;
+}

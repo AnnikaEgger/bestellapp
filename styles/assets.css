@@ -1,0 +1,71 @@
+/* #region dish-sections */
+
+.food-sections-seperator {
+  position: relative;
+}
+
+.food-sections-seperator img {
+  position: absolute;
+  bottom: 0px;
+  left: 250px;
+  width: 90px;
+  height: 90px;
+}
+
+.h2-container {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  background-color: var(--orange);
+}
+
+h2 {
+  padding: 0 150px;
+}
+
+.article-section {
+  display: flex;
+  flex-direction: column;
+  margin-top: 32px;
+  margin-bottom: 64px;
+  gap: 16px;
+}
+
+.dish-container {
+  display: flex;
+  padding: 10px;
+  gap: 15px;
+  width: 720px;
+
+  border-radius: var(--border-radius-dish);
+
+  background-color: var(--beige-light);
+}
+
+.dish-container > img {
+  width: 200px;
+  height: 120px;
+  border-radius: var(--border-radius-dish);
+  object-fit: cover;
+}
+
+.dish-container-left {
+  flex: 1;
+}
+
+.dish-container-left-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.add-to-basket-btn {
+  display: flex;
+  justify-self: end;
+  padding: 5px 8px;
+  border-radius: 20px;
+
+  background-color: white;
+  border: none;
+}
+
+/* #endregion */
