@@ -13,7 +13,7 @@ function addItemTemplate(indexArray, indexObject) {
         </div>
         <p class="dish-ingredients">${items[indexArray][indexObject].ingredients}</p>
       </div>
-      <button class="add-to-basket-btn">Add to basket</button>
+      <button id="${"btnAdd" + indexArray + indexObject}" onclick="addBasketItem(${indexArray}, ${indexObject})" class="add-to-basket-btn">Add to basket</button>
     </div>
   </article>`;
 }

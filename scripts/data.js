@@ -108,3 +108,5 @@ let items = [
     },
   ],
 ];
+
+let basketItems = [];

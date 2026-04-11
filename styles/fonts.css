@@ -99,6 +99,10 @@ body {
   color: var(--grey-dark);
 }
 
+button {
+  font-family: "Palanquin";
+}
+
 h1 {
   font-family: "Palanquin Dark";
   font-size: 48px;
@@ -153,11 +157,49 @@ footer {
   color: white;
 }
 
-.order-dialog {
+.order-basket {
   color: var(--beige-light);
 }
 
-.order-dialog h2 {
+.order-basket h2 {
   font-size: 32px;
+  font-weight: 700;
+}
+
+.basket-item {
+  color: var(--grey-dark);
+}
+
+.basket-item {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.basket-item-bottom-left span {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.buy-now-btn {
+  color: white;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.calc-table th,
+td {
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.calc-table tr:last-child td {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.calc-table tr:last-child th {
+  font-size: 20px;
   font-weight: 700;
 }
