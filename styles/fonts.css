@@ -176,9 +176,10 @@ footer {
   line-height: 1.2;
 }
 
-.basket-item-bottom-left span {
+.basket-item-bottom-left button {
   font-size: 24px;
   font-weight: 600;
+  color: var(--grey-dark);
 }
 
 .buy-now-btn {

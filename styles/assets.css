@@ -121,6 +121,8 @@
 
 button {
   line-height: 1;
+  cursor: pointer;
+  padding: 0;
 }
 
 .order-basket {
@@ -177,7 +179,7 @@ button {
   align-items: center;
 }
 
-.delete-icon {
+.delete-icon img {
   width: 16px;
   height: 18px;
 }
@@ -185,7 +187,7 @@ button {
 .basket-item-bottom-left {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 8px;
 }
 
 .basket-items-section {
@@ -254,5 +256,13 @@ button {
   .basket-items-section {
     scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
   }
+}
+
+.basket-item button {
+  border: none;
+  background-color: transparent;
+}
+
+.add-one-btn {
 }
 /* #endregion */
