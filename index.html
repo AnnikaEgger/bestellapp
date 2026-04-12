@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="./styles/assets.css" />
     <link rel="stylesheet" href="style.css" />
 
-    <script src="./scripts/data.js"></script>
+    <script src="./scripts/database.js"></script>
     <script src="scripts/templates.js"></script>
     <script src="script.js"></script>
   </head>
@@ -25,77 +25,84 @@
       <img src="./assets/icons/logo-bestellapp.svg" alt="Bestell-App-Logo" />
       <img src="./assets/icons/menu-bar.svg" alt="Menü Bar" />
     </header>
+
     <main>
-      <img
-        class="burger-logo"
-        src="./assets/icons/logo-burger.svg"
-        alt="Burger-Logo"
-      />
-
-      <section class="hero"></section>
-
-      <section class="headline-section">
-        <div class="headline-rating-container">
-          <h1><span>Burger</span><span>House</span></h1>
-          <div class="rating-box">
-            <img src="./assets/icons/rating-star.svg" alt="star icon" />
-            <p>4,1</p>
-            <p>(317)</p>
-          </div>
-        </div>
-        <p class="subtitle">
-          The best of Burgers, Pizza, and Greens, all in one great place.
-        </p>
-      </section>
-
-      <section class="food-section">
-        <section class="burger-section">
-          <div class="food-sections-seperator">
-            <img src="./assets/icons/burger-icon.svg" alt="Burger Icon" />
-            <h2>Burger & Sandwiches</h2>
-          </div>
-
-          <section
-            id="article-section--burger"
-            class="article-section"
-          ></section>
-        </section>
-
-        <section class="pizza-section">
-          <div class="food-sections-seperator">
-            <img src="./assets/icons/pizza-icon.svg" alt="Pizza Icon" />
-            <h2>Pizza <span class="pizza-cm">(30cm)</span></h2>
-          </div>
-
-          <section
-            id="article-section--pizza"
-            class="article-section"
-          ></section>
-        </section>
-
-        <section class="salad-section">
-          <div class="food-sections-seperator">
-            <img src="./assets/icons/salad-icon.svg" alt="Salad Icon" />
-            <h2>Salad</h2>
-          </div>
-
-          <section
-            id="article-section--salad"
-            class="article-section"
-          ></section>
-        </section>
-      </section>
-
-      <div id="order-basket" class="order-basket order-basket--empty">
-        <h2>Your Basket</h2>
-        <p>Nothing here yet. Go ahead and choose something delicious!</p>
+      <section class="start">
         <img
-          class="shopping-cart"
-          src="./assets/icons/shopping_cart.svg"
-          alt="Shopping Cart Icon"
+          class="burger-logo"
+          src="./assets/icons/logo-burger.svg"
+          alt="Burger-Logo"
         />
+
+        <section class="hero"></section>
+
+        <section class="headline-section">
+          <div class="headline-rating-container">
+            <h1><span>Burger</span><span>House</span></h1>
+            <div class="rating-box">
+              <img src="./assets/icons/rating-star.svg" alt="star icon" />
+              <p>4,1</p>
+              <p>(317)</p>
+            </div>
+          </div>
+          <p class="subtitle">
+            The best of Burgers, Pizza, and Greens, all in one great place.
+          </p>
+        </section>
+      </section>
+
+      <div class="content-wrapper">
+        <section class="food-section">
+          <section class="burger-section">
+            <div class="food-sections-seperator">
+              <img src="./assets/icons/burger-icon.svg" alt="Burger Icon" />
+              <h2>Burger & Sandwiches</h2>
+            </div>
+
+            <section
+              id="article-section--burger"
+              class="article-section"
+            ></section>
+          </section>
+
+          <section class="pizza-section">
+            <div class="food-sections-seperator">
+              <img src="./assets/icons/pizza-icon.svg" alt="Pizza Icon" />
+              <h2>Pizza <span class="pizza-cm">(30cm)</span></h2>
+            </div>
+
+            <section
+              id="article-section--pizza"
+              class="article-section"
+            ></section>
+          </section>
+
+          <section class="salad-section">
+            <div class="food-sections-seperator">
+              <img src="./assets/icons/salad-icon.svg" alt="Salad Icon" />
+              <h2>Salad</h2>
+            </div>
+
+            <section
+              id="article-section--salad"
+              class="article-section"
+            ></section>
+          </section>
+        </section>
+        <section class="basket-wrapper">
+          <div id="order-basket" class="order-basket order-basket--empty">
+            <h2>Your Basket</h2>
+            <p>Nothing here yet. Go ahead and choose something delicious!</p>
+            <img
+              class="shopping-cart"
+              src="./assets/icons/shopping_cart.svg"
+              alt="Shopping Cart Icon"
+            />
+          </div>
+        </section>
       </div>
     </main>
+
     <footer>
       <div class="copyright-container">
         <img src="./assets/icons/copyright.svg" alt="Copyright Icon" />

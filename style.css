@@ -13,9 +13,13 @@ header {
   align-items: center;
   justify-content: space-between;
 
-  background-color: var(--orange);
+  background-color: rgba(231, 108, 31, 0.9);
   height: 120px;
   z-index: 1;
+}
+
+.start {
+  height: 100dvh;
 }
 
 main {

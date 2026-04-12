@@ -10,11 +10,11 @@ function renderItems() {
       indexObject++
     ) {
       if (indexArray == 0) {
-        burgerSection.innerHTML += basketItemTemplate(indexArray, indexObject);
+        burgerSection.innerHTML += itemArticleTemplate(indexArray, indexObject);
       } else if (indexArray == 1) {
-        pizzaSection.innerHTML += basketItemTemplate(indexArray, indexObject);
+        pizzaSection.innerHTML += itemArticleTemplate(indexArray, indexObject);
       } else if (indexArray == 2) {
-        saladSection.innerHTML += basketItemTemplate(indexArray, indexObject);
+        saladSection.innerHTML += itemArticleTemplate(indexArray, indexObject);
       }
     }
   }
@@ -28,8 +28,9 @@ function renderBasket() {
 
   basket.innerHTML = fullBasketTemplate();
 
+  calcBasketItemPrice();
   renderBasketItems();
-  calcBasketPrice();
+  calcBasketTablePrice();
 }
 
 function renderBasketItems() {
@@ -37,7 +38,11 @@ function renderBasketItems() {
     const BASKET_ITEMS_SECTION = document.getElementById(
       "basket-items-section",
     );
-    BASKET_ITEMS_SECTION.innerHTML += basketItemSectionTemplate(index);
+    if (basketItems[index].amount > 1) {
+      BASKET_ITEMS_SECTION.innerHTML += basketItemSecondTemplate(index);
+    } else {
+      BASKET_ITEMS_SECTION.innerHTML += basketItemTemplate(index);
+    }
   }
 }
 
@@ -46,8 +51,9 @@ function addBasketItem(indexArray, indexObject) {
     if (basketItems[index].name == items[indexArray][indexObject].name) {
       elAlreadyExists = true;
       basketItems[index].amount += 1;
-      basketItems[index].totalPrice =
-        basketItems[index].singlePrice * basketItems[index].amount;
+
+      // basketItems[index].totalPrice =
+      //   basketItems[index].singlePrice * basketItems[index].amount;
       renderBasket();
       return;
     } else {
@@ -61,11 +67,27 @@ function addBasketItem(indexArray, indexObject) {
       "totalPrice": items[indexArray][indexObject].price,
       "amount": 1,
     });
+
+    updateBtnAdd(indexArray, indexObject);
     renderBasket();
   }
 }
 
-function calcBasketPrice() {
+function calcBasketItemPrice() {
+  for (let index = 0; index < basketItems.length; index++) {
+    basketItems[index].totalPrice =
+      basketItems[index].singlePrice * basketItems[index].amount;
+  }
+}
+
+function updateBtnAdd(indexArray, indexObject) {
+  let btnAdd = document.getElementById("btnAdd" + indexArray + indexObject);
+
+  btnAdd.style = "color: rgba(231, 108, 31, 1)";
+  btnAdd.innerHTML = "Added" + basketItems[0].amount;
+}
+
+function calcBasketTablePrice() {
   let subtotal = 0;
   let deliveryFee = 4.99;
   let total = 0;
@@ -104,3 +126,15 @@ function amountPlusOne(basketItemIndex) {
 
   renderBasket();
 }
+
+function amountMinusOne(basketItemIndex) {
+  if (basketItems[basketItemIndex].amount == 1) {
+    deleteBasketItem(basketItemIndex);
+    renderBasket();
+  } else {
+    basketItems[basketItemIndex].amount -= 1;
+    renderBasket();
+  }
+}
+
+// btn add to basket --> added (amount)

@@ -1,17 +1,28 @@
 /* #region dish-sections */
 
+.content-wrapper {
+  position: relative;
+}
+
+.basket-wrapper {
+  position: absolute;
+  width: 400px;
+  top: 0;
+  bottom: 0;
+  right: var(--padding-content-x);
+}
+
 .food-sections-seperator {
-  /* position: relative; */
   display: flex;
   align-items: center;
   gap: 24px;
   height: 60px;
   background-color: var(--orange);
   overflow-y: visible;
+  width: 100%;
 }
 
 .food-sections-seperator img {
-  /* position: absolute; */
   bottom: 0px;
   left: 250px;
   width: 90px;
@@ -126,12 +137,11 @@ button {
 }
 
 .order-basket {
-  position: fixed;
-  top: 15dvh;
-  /* height: 70dvh; */
+  position: sticky;
+  top: 144px;
+
   height: 750px;
   width: 400px;
-  /* left: 100dvw; */
   left: calc(100dvw - 400px - var(--padding-content-x));
 
   display: flex;
@@ -184,6 +194,24 @@ button {
   height: 18px;
 }
 
+.delete-icon {
+  /* filter: invert(0%) sepia(79%) saturate(2476%) hue-rotate(86deg)
+    brightness(100%) contrast(100%); */
+  /* filter: invert(47%) sepia(94%) saturate(1947%) hue-rotate(352deg)
+    brightness(96%) contrast(88%); */
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.delete-icon:hover {
+  filter: invert(47%) sepia(94%) saturate(1947%) hue-rotate(352deg)
+    brightness(96%) contrast(88%);
+}
+
+.amount-btn:hover {
+  color: var(--orange);
+}
+
 .basket-item-bottom-left {
   display: flex;
   align-items: center;
@@ -210,8 +238,16 @@ button {
   gap: 10px;
   padding: 12px 48px;
   background-color: var(--orange);
-  border: none;
+  border: 1px solid transparent;
   border-radius: 60px;
+}
+
+.buy-now-btn:hover {
+  background-color: rgba(231, 108, 31, 0.8);
+}
+
+.buy-now-btn:active {
+  border-color: white;
 }
 
 .calc-table {
@@ -263,6 +299,12 @@ button {
   background-color: transparent;
 }
 
-.add-one-btn {
+.plus-one-btn {
+}
+
+.name-dlt-btn-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 /* #endregion */
