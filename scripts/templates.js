@@ -89,7 +89,7 @@ function basketTableTemplate(subtotal, deliveryFee, total) {
       </tr>
     </table>
 
-    <button class="buy-now-btn">Buy now <span>(${total.toFixed(2).replace(".", ",") + "€"})</span></button>`;
+    <button onclick="submitOrder()" class="buy-now-btn">Buy now <span>(${total.toFixed(2).replace(".", ",") + "€"})</span></button>`;
 }
 
 function emptyBasketTemplate() {
@@ -104,11 +104,11 @@ function emptyBasketTemplate() {
 
 function fullBasketTemplate() {
   return `<h2>Your Basket</h2>
+  <div class="basket-items-section-wrapper">
   <section id="basket-items-section" class="basket-items-section">
   </section>
+  </div>
   <section id="calc-price-section" class="calc-price-section">
    
   </section>`;
 }
-
-// function BasketWithMinusButton

@@ -26,7 +26,11 @@ function renderBasket() {
   basket.classList.remove("order-basket--empty");
   basket.classList.add("order-basket--full");
 
-  basket.innerHTML = fullBasketTemplate();
+  if (basketItems.length == 0) {
+    basket.innerHTML = emptyBasketTemplate();
+  } else {
+    basket.innerHTML = fullBasketTemplate();
+  }
 
   calcBasketItemPrice();
   renderBasketItems();
@@ -52,8 +56,7 @@ function addBasketItem(indexArray, indexObject) {
       elAlreadyExists = true;
       basketItems[index].amount += 1;
 
-      // basketItems[index].totalPrice =
-      //   basketItems[index].singlePrice * basketItems[index].amount;
+      updateBtnAdd(indexArray, indexObject);
       renderBasket();
       return;
     } else {
@@ -68,7 +71,9 @@ function addBasketItem(indexArray, indexObject) {
       "amount": 1,
     });
 
-    updateBtnAdd(indexArray, indexObject);
+    // updateBtnAdd(indexArray, indexObject);
+    updateBtnAdd();
+
     renderBasket();
   }
 }
@@ -80,11 +85,44 @@ function calcBasketItemPrice() {
   }
 }
 
-function updateBtnAdd(indexArray, indexObject) {
-  let btnAdd = document.getElementById("btnAdd" + indexArray + indexObject);
+// function updateBtnAdd(indexArray, indexObject) {
+//   let btnAdd = document.getElementById("btnAdd" + indexArray + indexObject);
 
-  btnAdd.style = "color: rgba(231, 108, 31, 1)";
-  btnAdd.innerHTML = "Added" + basketItems[0].amount;
+//   btnAdd.style = "color: rgba(231, 108, 31, 1)";
+
+//   for (let index = 0; index < basketItems.length; index++) {
+//     if (items[indexArray][indexObject].name == basketItems[index].name) {
+//       btnAdd.innerHTML = "Added " + basketItems[index].amount;
+//     }
+//   }
+// }
+
+function updateBtnAdd() {
+  for (let indexArray = 0; indexArray < items.length; indexArray++) {
+    for (
+      let indexObject = 0;
+      indexObject < items[indexArray].length;
+      indexObject++
+    ) {
+      let btnAdd = document.getElementById("btnAdd" + indexArray + indexObject);
+
+      for (let index = 0; index < basketItems.length; index++) {
+        if (items[indexArray][indexObject].name == basketItems[index].name) {
+          btnAdd.style = "color: rgba(231, 108, 31, 1)";
+          btnAdd.innerHTML = "Added " + basketItems[index].amount;
+          break;
+        } else {
+          btnAdd.innerHTML = "Add to Basket";
+          btnAdd.style = "color: rgba(54, 53, 52, 1)";
+        }
+      }
+
+      if (basketItems.length == 0) {
+        btnAdd.innerHTML = "Add to Basket";
+        btnAdd.style = "color: rgba(54, 53, 52, 1)";
+      }
+    }
+  }
 }
 
 function calcBasketTablePrice() {
@@ -119,10 +157,15 @@ function deleteBasketItem(basketItemsIndex) {
 
     basket.innerHTML = emptyBasketTemplate();
   }
+
+  // updateBtnAdd(indexArray, indexObject);
+  updateBtnAdd();
 }
 
 function amountPlusOne(basketItemIndex) {
   basketItems[basketItemIndex].amount += 1;
+  // updateBtnAdd(indexArray, indexObject);
+  updateBtnAdd();
 
   renderBasket();
 }
@@ -133,8 +176,32 @@ function amountMinusOne(basketItemIndex) {
     renderBasket();
   } else {
     basketItems[basketItemIndex].amount -= 1;
+    updateBtnAdd();
+
     renderBasket();
   }
 }
 
-// btn add to basket --> added (amount)
+function submitOrder() {
+  let confirmationDialog = document.getElementById("confirmation-dialog");
+  let basket = document.getElementById("order-basket");
+
+  basketItems = [];
+  updateBtnAdd();
+  confirmationDialog.showModal();
+  // basket.style.display = "none";
+
+  basket.classList.add("order-basket-closed");
+
+  confirmationDialog.classList.add("confirmation-dialog-closed");
+  setTimeout(closeDialog, 6000);
+}
+
+function closeDialog() {
+  let confirmationDialog = document.getElementById("confirmation-dialog");
+  let basket = document.getElementById("order-basket");
+
+  confirmationDialog.close();
+  basket.classList.remove("order-basket-closed");
+  renderBasket();
+}

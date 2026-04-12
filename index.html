@@ -26,7 +26,7 @@
       <img src="./assets/icons/menu-bar.svg" alt="Menü Bar" />
     </header>
 
-    <main>
+    <main id="main">
       <section class="start">
         <img
           class="burger-logo"
@@ -101,6 +101,23 @@
           </div>
         </section>
       </div>
+
+      <dialog id="confirmation-dialog" class="confirmation-dialog">
+        <div class="dialog-content-wrapper">
+          <button onclick="closeDialog()" class="close-confirmation-dialog-btn">
+            <img src="./assets/icons/close.svg" alt="Close Icon" />
+          </button>
+          <img
+            class="burger-truck"
+            src="./assets/icons/burger-truck.svg"
+            alt="Truck with a Burger Icon on it"
+          />
+          <div class="confirmation-dialog-text">
+            <p>Order confirmed!</p>
+            <p>Your food is on the way!</p>
+          </div>
+        </div>
+      </dialog>
     </main>
 
     <footer>

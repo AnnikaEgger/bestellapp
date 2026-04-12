@@ -154,6 +154,10 @@ button {
   border: none;
 }
 
+.order-basket-closed {
+  display: none;
+}
+
 .order-basket--empty {
   gap: 48px;
   align-items: center;
@@ -218,11 +222,16 @@ button {
   gap: 8px;
 }
 
+.basket-items-section-wrapper {
+  display: flex;
+  overflow-y: auto;
+  flex-direction: column-reverse;
+}
+
 .basket-items-section {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  overflow-y: scroll;
 }
 
 .calc-price-section {
@@ -267,29 +276,29 @@ button {
   border-radius: 1.5px;
 }
 
-.basket-items-section {
+.basket-items-section-wrapper {
   --sb-track-color: #363534;
   --sb-thumb-color: #facaac;
   --sb-size: 26px;
 }
 
-.basket-items-section::-webkit-scrollbar {
+.basket-items-section-wrapper::-webkit-scrollbar {
   width: var(--sb-size);
 }
 
-.basket-items-section::-webkit-scrollbar-track {
+.basket-items-section-wrapper::-webkit-scrollbar-track {
   background: var(--sb-track-color);
   border-radius: 3px;
 }
 
-.basket-items-section::-webkit-scrollbar-thumb {
+.basket-items-section-wrapper::-webkit-scrollbar-thumb {
   background: var(--sb-thumb-color);
   border-radius: 3px;
   border: 10px solid #363534;
 }
 
 @supports not selector(::-webkit-scrollbar) {
-  .basket-items-section {
+  .basket-items-section-wrapper {
     scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
   }
 }
@@ -307,4 +316,59 @@ button {
   justify-content: space-between;
   align-items: center;
 }
+/* #endregion */
+
+/* #region confirmation dialog */
+
+.confirmation-dialog {
+  position: fixed;
+
+  top: 35dvh;
+  justify-self: center;
+
+  padding: 32px 40px;
+
+  background-color: var(--grey-dark);
+  border-radius: 30px;
+  outline: none;
+  border: none;
+  opacity: 1;
+  /* transition: opacity 5s ease-in-out; */
+}
+
+.confirmation-dialog-closed {
+  opacity: 0;
+  transition: opacity 1s ease-in-out 5s;
+}
+
+.confirmation-dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.dialog-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 26px;
+}
+
+.close-confirmation-dialog-btn {
+  align-self: flex-end;
+  background-color: transparent;
+  padding: 0;
+  outline: none;
+  border: none;
+}
+
+.close-confirmation-dialog-btn img {
+  width: 16px;
+  height: 16px;
+}
+
+.burger-truck {
+  align-self: center;
+  width: 80px;
+  height: 60px;
+}
+
 /* #endregion */

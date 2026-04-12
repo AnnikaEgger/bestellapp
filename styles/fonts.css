@@ -204,3 +204,17 @@ td {
   font-size: 20px;
   font-weight: 700;
 }
+
+.confirmation-dialog-text {
+  color: var(--beige-light);
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.confirmation-dialog-text p:first-child {
+  font-size: 42px;
+}
+
+.confirmation-dialog-text p:last-child {
+  font-size: 24px;
+}
