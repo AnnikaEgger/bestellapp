@@ -94,6 +94,10 @@
 }
 /* #endregion */
 
+* {
+  line-height: 1.2;
+}
+
 body {
   font-family: "Palanquin";
   color: var(--grey-dark);
@@ -110,6 +114,12 @@ header nav a:hover {
 
 button {
   font-family: "Palanquin";
+}
+
+.subtitle {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
 }
 
 h1 {
@@ -226,4 +236,29 @@ td {
 
 .confirmation-dialog-text p:last-child {
   font-size: 24px;
+}
+
+@media screen and (max-width: 1280px) {
+  .basket-item {
+    font-size: 20px;
+  }
+
+  .buy-now-btn {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .order-basket h2 {
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  .buy-now-btn {
+    font-size: 18px;
+  }
+
+  .basket-item {
+    font-size: 18px;
+  }
 }

@@ -1,0 +1,132 @@
+.content-wrapper {
+  position: relative;
+}
+
+.food-sections-seperator {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  height: 60px;
+  background-color: var(--orange);
+  overflow-y: visible;
+  width: 100%;
+}
+
+.food-sections-seperator img {
+  bottom: 0px;
+  left: 250px;
+  width: 90px;
+  height: 90px;
+}
+
+.h2-container img {
+  align-items: flex-end;
+}
+
+.article-section {
+  display: flex;
+  flex-direction: column;
+  margin-top: 32px;
+  margin-bottom: 64px;
+  gap: 16px;
+}
+
+.dish-container {
+  display: flex;
+  padding: 10px;
+  gap: 15px;
+  width: 720px;
+  border-radius: var(--border-radius-dish);
+  background-color: var(--beige-light);
+}
+
+.dish-container:hover {
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.15));
+}
+
+.dish-container img {
+  width: 200px;
+  height: 120px;
+  border-radius: var(--border-radius-dish);
+  object-fit: cover;
+}
+
+.black-burger {
+  object-position: 0% 70%;
+}
+
+.zoom-img-container {
+  align-self: center;
+  width: 200px;
+  height: 120px;
+  border-radius: var(--border-radius-dish);
+  overflow: hidden;
+}
+
+.red-burger {
+  object-position: -15px -30px;
+
+  zoom: 1.6;
+}
+
+.margherita {
+  object-position: -50px -30px;
+  zoom: 1.6;
+}
+
+.aragula-salad {
+  object-position: -40px -30px;
+  zoom: 1.4;
+}
+
+.mini-green-salad {
+  object-position: -25px -10px;
+  zoom: 1.3;
+}
+
+.dish-container-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.dish-container-left-top {
+  /* flex: 1; */
+  display: flex;
+  justify-content: space-between;
+}
+
+.dish-ingredients {
+  width: 35ch;
+  line-height: 1.3;
+}
+
+.add-to-basket-btn {
+  align-self: flex-end;
+  padding: 5px 8px;
+  border-radius: 20px;
+
+  background-color: white;
+  border: none;
+}
+
+.add-to-basket-btn:hover {
+  color: var(--orange);
+  filter: drop-shadow(1px 2px 2px rgba(0, 0, 0, 0.2));
+}
+
+/* #region responsive */
+
+@media screen and (max-width: 1280px) {
+  .dish-container {
+    width: 600px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .dish-container {
+    width: 500px;
+  }
+}
+
+/* #endregion */

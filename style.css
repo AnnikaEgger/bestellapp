@@ -5,6 +5,18 @@ footer,
   padding: var(--padding-content);
 }
 
+main {
+  position: relative;
+  flex: 1;
+}
+
+button {
+  line-height: 1;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* #region header */
 header {
   position: fixed;
   width: 100%;
@@ -28,32 +40,21 @@ header img {
   padding-right: 48px;
 }
 
+/* #endregion */
+
+/* #region section start */
+
 .start {
   height: min(100dvh, 1000px);
 }
 
-main {
-  position: relative;
-  flex: 1;
-}
-
-main .salad-section {
-  /* flex: 1; */
-}
-
 .hero {
   height: 650px;
-}
-
-.hero {
-  height: 650px;
-  margin: var(--padding-content);
-
-  /* height: 100%; */
-  /* object-fit: contain; */
+  margin: 0px var(--content-limitation);
   background-image: url(./assets/img/hero.png);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 
 .burger-logo {
@@ -62,6 +63,8 @@ main .salad-section {
 
   display: flex;
   justify-self: center;
+  height: 200px;
+  width: 200px;
 }
 
 .headline-section {
@@ -77,13 +80,7 @@ main .salad-section {
 .headline-rating-container {
   display: flex;
   align-items: center;
-
   gap: 24px;
-}
-
-.subtitle {
-  font-size: 24px;
-  font-weight: 700;
 }
 
 .rating-box {
@@ -102,15 +99,13 @@ main .salad-section {
   width: 24px;
 }
 
+/* #endregion */
+
+/* #region footer */
 footer {
-  /* position: absolute;
-  bottom: 0;
-  top: 100%; */
-  /* left: 0; */
   display: flex;
   justify-content: center;
   align-items: center;
-  /* align-self: flex-end; */
   gap: 100px;
   height: 120px;
   background-color: var(--orange);
@@ -126,3 +121,56 @@ footer {
   width: 24px;
   height: 24px;
 }
+
+/* #endregion */
+
+/* #region responsive */
+
+@media screen and (max-width: 768px) {
+  header {
+    position: unset;
+    justify-content: start;
+    background-color: rgba(231, 108, 31, 1);
+    height: 80px;
+    z-index: 0;
+  }
+
+  header nav {
+    display: none;
+  }
+
+  header img:first-child {
+    padding: 0 0;
+  }
+
+  header img:last-child {
+    display: none;
+  }
+
+  .hero {
+    height: 350px;
+    border-radius: 16px;
+    margin: 24px 16px;
+    background-image: url(./assets/img/hero.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .headline-rating-container {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .burger-logo {
+    position: absolute;
+    top: 250px;
+
+    display: flex;
+    justify-self: center;
+    width: 120px;
+    height: 120px;
+  }
+}
+/* #endregion */

@@ -4,8 +4,8 @@ function renderBasket() {
   if (basketItems.length == 0) {
     basketWrapper.innerHTML = emptyBasketTemplate();
 
-    let basket = document.getElementById("order-basket", "order-basket-closed");
-    basket.classList.remove("order-basket--full");
+    let basket = document.getElementById("order-basket");
+    basket.classList.remove("order-basket--full", "order-basket-closed");
     basket.classList.add("order-basket--empty");
   } else {
     basketWrapper.innerHTML = fullBasketTemplate();
@@ -83,15 +83,18 @@ function calcBasketTablePrice() {
 function deleteBasketItem(basketItemsIndex) {
   basketItems.splice(basketItemsIndex, 1);
 
-  if (basketItems.length > 0) {
-    renderBasket();
-  } else if (basketItems.length == 0) {
-    let basket = document.getElementById("order-basket");
+  // if (basketItems.length > 0) {
+  //   renderBasket();
+  // } else if (basketItems.length == 0) {
+  //   // let basket = document.getElementById("order-basket");
 
-    basket.classList.remove("order-basket--full");
-    basket.classList.add("order-basket--empty");
-    basket.innerHTML = emptyBasketTemplate();
-  }
+  //   // basket.classList.remove("order-basket--full");
+  //   // basket.classList.add("order-basket--empty");
+  //   // basket.innerHTML = emptyBasketTemplate();
+
+  //   renderBasket();
+  // }
+  renderBasket();
   updateBtnAdd();
 }
 
