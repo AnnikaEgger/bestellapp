@@ -18,11 +18,16 @@
 
     <script src="./scripts/database.js"></script>
     <script src="scripts/templates.js"></script>
+    <script src="./scripts/basket.js"></script>
     <script src="script.js"></script>
   </head>
-  <body onload="renderItems()">
+  <body onload="init()">
     <header>
       <img src="./assets/icons/logo-bestellapp.svg" alt="Bestell-App-Logo" />
+      <nav>
+        <a href="#burger-section">Burger</a><a href="#pizza-section">Pizza</a
+        ><a href="#salad-section">Salad</a>
+      </nav>
       <img src="./assets/icons/menu-bar.svg" alt="Menü Bar" />
     </header>
 
@@ -34,7 +39,9 @@
           alt="Burger-Logo"
         />
 
-        <section class="hero"></section>
+        <section class="hero">
+          <!-- <img src="./assets/img/hero.png" alt="" /> -->
+        </section>
 
         <section class="headline-section">
           <div class="headline-rating-container">
@@ -53,7 +60,7 @@
 
       <div class="content-wrapper">
         <section class="food-section">
-          <section class="burger-section">
+          <section id="burger-section" class="burger-section">
             <div class="food-sections-seperator">
               <img src="./assets/icons/burger-icon.svg" alt="Burger Icon" />
               <h2>Burger & Sandwiches</h2>
@@ -65,7 +72,7 @@
             ></section>
           </section>
 
-          <section class="pizza-section">
+          <section id="pizza-section" class="pizza-section">
             <div class="food-sections-seperator">
               <img src="./assets/icons/pizza-icon.svg" alt="Pizza Icon" />
               <h2>Pizza <span class="pizza-cm">(30cm)</span></h2>
@@ -77,7 +84,7 @@
             ></section>
           </section>
 
-          <section class="salad-section">
+          <section id="salad-section" class="salad-section">
             <div class="food-sections-seperator">
               <img src="./assets/icons/salad-icon.svg" alt="Salad Icon" />
               <h2>Salad</h2>
@@ -89,17 +96,7 @@
             ></section>
           </section>
         </section>
-        <section class="basket-wrapper">
-          <div id="order-basket" class="order-basket order-basket--empty">
-            <h2>Your Basket</h2>
-            <p>Nothing here yet. Go ahead and choose something delicious!</p>
-            <img
-              class="shopping-cart"
-              src="./assets/icons/shopping_cart.svg"
-              alt="Shopping Cart Icon"
-            />
-          </div>
-        </section>
+        <section id="basket-wrapper" class="basket-wrapper"></section>
       </div>
 
       <dialog id="confirmation-dialog" class="confirmation-dialog">
