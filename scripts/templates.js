@@ -6,16 +6,17 @@ function itemArticleTemplate(indexArray, indexObject) {
         alt="${items[indexArray][indexObject].imageAlt}" />
     </div>
     <div class="dish-container-left">
-      <div class="dish-container-left-descr">
-        <div class="dish-container-left-top">
+      <div class="dish-container-left-left">
           <h3>${items[indexArray][indexObject].name}</h3>
-          <p class="dish-price">${items[indexArray][indexObject].price.toFixed(2).replace(".", ",") + "€"}</p>
-        </div>
         <p class="dish-ingredients">${items[indexArray][indexObject].ingredients}</p>
       </div>
-      <button id="${"btnAdd" + indexArray + indexObject}" 
-      onclick="addBasketItem(${indexArray}, ${indexObject})" 
-      class="add-to-basket-btn">Add to basket</button>
+
+      <div class="dish-container-left-right">
+        <p class="dish-price">${items[indexArray][indexObject].price.toFixed(2).replace(".", ",") + "€"}</p>
+        <button id="${"btnAdd" + indexArray + indexObject}" 
+        onclick="addBasketItem(${indexArray}, ${indexObject})" 
+        class="add-to-basket-btn">Add to basket</button>
+      </div>
     </div>
   </article>`;
 }

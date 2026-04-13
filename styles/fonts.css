@@ -262,3 +262,21 @@ td {
     font-size: 18px;
   }
 }
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 40px;
+  }
+
+  .subtitle {
+    font-size: 22px;
+  }
+
+  .food-sections-seperator h2 {
+    font-size: 32px;
+  }
+
+  .pizza-cm {
+    font-weight: 400;
+  }
+}

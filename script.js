@@ -1,6 +1,6 @@
 function init() {
   renderItems();
-  renderBasket();
+  // renderBasket();
 }
 
 function renderItems() {

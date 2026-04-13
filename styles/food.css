@@ -65,7 +65,6 @@
 
 .red-burger {
   object-position: -15px -30px;
-
   zoom: 1.6;
 }
 
@@ -87,13 +86,20 @@
 .dish-container-left {
   flex: 1;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
 }
 
-.dish-container-left-top {
-  /* flex: 1; */
+.dish-container-left-left {
   display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dish-container-left-right {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
   justify-content: space-between;
 }
 
@@ -126,6 +132,65 @@
 @media screen and (max-width: 1000px) {
   .dish-container {
     width: 500px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .dish-container {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .zoom-img-container {
+    width: 100%;
+    height: 86px;
+  }
+
+  .dish-container img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .dish-container-left {
+    flex-direction: column;
+  }
+
+  .dish-ingredients {
+    width: unset;
+  }
+
+  .dish-container-left-right {
+    flex-direction: row;
+    padding-top: 16px;
+  }
+
+  .red-burger {
+    object-position: unset;
+    zoom: 1;
+  }
+
+  .margherita {
+    object-position: unset;
+    zoom: 1;
+  }
+
+  .aragula-salad {
+    object-position: unset;
+    zoom: 1;
+  }
+
+  .mini-green-salad {
+    object-position: unset;
+    zoom: 1;
+  }
+
+  .and-sandwiches {
+    display: none;
+  }
+
+  .food-sections-seperator {
+    justify-content: center;
+    gap: 8px;
   }
 }
 

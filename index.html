@@ -36,11 +36,11 @@
 
     <main id="main">
       <section class="start">
-        <!-- <img
+        <img
           class="burger-logo"
           src="./assets/icons/burger-logo.png"
           alt="Burger-Logo"
-        /> -->
+        />
 
         <section class="hero"></section>
 
@@ -64,7 +64,10 @@
           <section id="burger-section" class="burger-section">
             <div class="food-sections-seperator">
               <img src="./assets/icons/burger-icon.svg" alt="Burger Icon" />
-              <h2>Burger & Sandwiches</h2>
+              <h2>
+                <span>Burger </span
+                ><span class="and-sandwiches">& Sandwiches</span>
+              </h2>
             </div>
 
             <section
@@ -97,7 +100,10 @@
             ></section>
           </section>
         </section>
-        <section id="basket-wrapper" class="basket-wrapper"></section>
+        <section
+          id="basket-wrapper"
+          class="basket-wrapper basket-wrapper-resp-closed"
+        ></section>
       </div>
 
       <dialog id="confirmation-dialog" class="confirmation-dialog">
@@ -126,5 +132,25 @@
       <p>Imprint</p>
       <p>Cookie Preferences</p>
     </footer>
+
+    <div class="menu-bar">
+      <nav>
+        <button>
+          <img src="./assets/icons/home.svg" alt="Home Button" />
+        </button>
+        <button>
+          <img src="./assets/icons/person.svg" alt="Person Icon" />
+        </button>
+        <button>
+          <img src="./assets/icons/takeout.svg" alt="Takeout Icon" />
+        </button>
+        <button>
+          <img
+            src="./assets/icons/shopping_cart_small.svg"
+            alt="Shopping Cart Icon"
+          />
+        </button>
+      </nav>
+    </div>
   </body>
 </html>

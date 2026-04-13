@@ -245,4 +245,13 @@
     justify-content: center;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .basket-wrapper-resp-closed {
+    display: none;
+  }
+
+  .basket-wrapper-resp-open {
+  }
+}
 /* #endregion */
