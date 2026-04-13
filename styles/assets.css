@@ -333,7 +333,7 @@ button {
   outline: none;
   border: none;
   opacity: 1;
-  /* transition: opacity 5s ease-in-out; */
+  /* transition: opacity 1s ease-in-out 5s; */
 }
 
 .confirmation-dialog-closed {

@@ -93,22 +93,32 @@ function basketTableTemplate(subtotal, deliveryFee, total) {
 }
 
 function emptyBasketTemplate() {
-  return `<h2>Your Basket</h2>
+  return ` <div id="order-basket" class="order-basket">
+    <h2>Your Basket</h2>
         <p>Nothing here yet. Go ahead and choose something delicious!</p>
         <img
           class="shopping-cart"
           src="./assets/icons/shopping_cart.svg"
           alt="Shopping Cart Icon"
-        />`;
+        />
+    </div>`;
 }
 
 function fullBasketTemplate() {
-  return `<h2>Your Basket</h2>
-  <div class="basket-items-section-wrapper">
-  <section id="basket-items-section" class="basket-items-section">
-  </section>
-  </div>
-  <section id="calc-price-section" class="calc-price-section">
-   
-  </section>`;
+  return `<div id="order-basket" class="order-basket">
+    <h2>Your Basket</h2>
+    <div class="basket-items-section-wrapper">
+      <section id="basket-items-section" class="basket-items-section">
+      </section>
+    </div>
+    <section id="calc-price-section" class="calc-price-section">
+    </section>
+  </div>`;
+}
+
+function basketItemObjectTemplate(indexArray, indexObject) {
+  return `{"name": "${items[indexArray][indexObject].name}",
+      "singlePrice": ${items[indexArray][indexObject].price},
+      "totalPrice": ${items[indexArray][indexObject].price},
+      "amount": 1}`;
 }
