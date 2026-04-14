@@ -32,7 +32,7 @@
 .close-confirmation-dialog-btn {
   align-self: flex-end;
   background-color: transparent;
-  padding: 0;
+  padding: 4px;
   outline: none;
   border: none;
 }
@@ -46,4 +46,14 @@
   align-self: center;
   width: 80px;
   height: 60px;
+}
+
+@media screen and (max-width: 768px) {
+  .dialog-content-wrapper {
+    gap: 16px;
+  }
+
+  .confirmation-dialog {
+    padding: 16px 16px;
+  }
 }

@@ -94,7 +94,10 @@ function basketTableTemplate(subtotal, deliveryFee, total) {
 }
 
 function emptyBasketTemplate() {
-  return ` <div id="order-basket" class="order-basket">
+  return ` <dialog id="order-basket" class="order-basket order-basket-closed">
+  <button onclick="closeBasket()" id="close-basket-btn" class="close-basket-btn">
+      <img src="./assets/icons/close.svg" alt="Close Icon">
+    </button>
     <h2>Your Basket</h2>
         <p>Nothing here yet. Go ahead and choose something delicious!</p>
         <img
@@ -102,11 +105,14 @@ function emptyBasketTemplate() {
           src="./assets/icons/shopping_cart.svg"
           alt="Shopping Cart Icon"
         />
-    </div>`;
+    </dialog>`;
 }
 
 function fullBasketTemplate() {
-  return `<div id="order-basket" class="order-basket">
+  return `<dialog id="order-basket" class="order-basket order-basket-closed">
+  <button onclick="closeBasket()" id="close-basket-btn" class="close-basket-btn">
+      <img src="./assets/icons/close.svg" alt="Close Icon">
+    </button>
     <h2>Your Basket</h2>
     <div class="basket-items-section-wrapper">
       <section id="basket-items-section" class="basket-items-section">
@@ -114,7 +120,7 @@ function fullBasketTemplate() {
     </div>
     <section id="calc-price-section" class="calc-price-section">
     </section>
-  </div>`;
+  </dialog>`;
 }
 
 function basketItemObjectTemplate(indexArray, indexObject) {

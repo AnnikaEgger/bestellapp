@@ -6,15 +6,17 @@
   top: 0;
   bottom: 0;
   right: var(--content-limitation);
+  /* overflow: hidden; */
 }
 
 .order-basket {
-  position: sticky;
   top: 144px;
+  position: sticky;
 
   height: 750px;
   width: 100%;
-  left: calc(100dvw - 400px - var(--padding-content-x));
+  /* left: calc(100dvw - 400px - var(--padding-content-x)); */
+  /* left: 100dvw; */
 
   display: flex;
   flex-direction: column;
@@ -24,11 +26,17 @@
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
   border: none;
+  /* transition: left 5s ease-in-out; */
 }
 
-.order-basket-closed {
-  display: none;
-}
+/* .order-basket-closed {
+  left: 100dvw;
+} */
+
+/* .order-basket-open {
+  left: calc(100dvw - 400px - var(--padding-content-x));
+  transition: left 1s ease-in-out;
+} */
 
 .order-basket--empty {
   gap: 48px;
@@ -38,6 +46,14 @@
 
 .order-basket--full {
   gap: 24px;
+}
+
+.close-basket-btn {
+  background-color: transparent;
+  border: none;
+  display: none;
+  align-self: end;
+  padding: 8px;
 }
 
 .order-basket h2 {
@@ -214,7 +230,6 @@
   }
 
   .buy-now-btn {
-    /* flex-direction: row; */
     padding: 4px 0px;
     gap: 0px;
     border-radius: 24px;
@@ -246,33 +261,37 @@
 }
 
 @media screen and (max-width: 768px) {
-  .basket-wrapper-resp-closed {
+  /* .basket-wrapper-resp-closed {
     display: none;
-  }
+  } */
 
   .basket-wrapper {
-    height: 80dvh;
-  }
-
-  .basket-wrapper {
-    position: absolute;
-    display: flex;
+    position: unset;
     justify-content: center;
     width: 100%;
-    top: 0;
-    bottom: 0;
     right: unset;
+    height: unset;
   }
 
   .order-basket {
-    height: 100%;
-    width: min(100%, 400px);
-    padding: 0;
-  }
-
-  .order-basket {
-    height: 500px;
+    position: fixed;
+    height: 75dvh;
+    width: min(calc(100dvw - var(--padding-content-x) * 2), 400px);
     padding: 16px 16px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 0px;
+    top: unset;
+    left: 0;
+    bottom: 80px;
+    justify-self: center;
+  }
+
+  .order-basket--empty {
+    justify-content: unset;
+  }
+
+  .close-basket-btn {
+    display: flex;
   }
 }
 /* #endregion */
