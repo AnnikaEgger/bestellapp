@@ -18,7 +18,7 @@
   /* left: calc(100dvw - 400px - var(--padding-content-x)); */
   /* left: 100dvw; */
 
-  display: flex;
+  display: none;
   flex-direction: column;
 
   padding: 48px 32px;
@@ -30,8 +30,12 @@
 }
 
 /* .order-basket-closed {
-  left: 100dvw;
+  display: none;
 } */
+
+.order-basket-open {
+  display: flex;
+}
 
 /* .order-basket-open {
   left: calc(100dvw - 400px - var(--padding-content-x));

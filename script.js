@@ -1,6 +1,9 @@
 function init() {
   renderItems();
   renderBasket();
+  // if (window.innerWidth < 768) {
+  //   closeBasket();
+  // }
 }
 
 function renderItems() {
@@ -62,6 +65,7 @@ function submitOrder() {
   confirmationDialog.showModal();
 
   basket.classList.add("order-basket-closed");
+  basket.close();
 
   confirmationDialog.classList.add("confirmation-dialog-closed");
   setTimeout(closeDialog, 6000);

@@ -94,7 +94,7 @@ function basketTableTemplate(subtotal, deliveryFee, total) {
 }
 
 function emptyBasketTemplate() {
-  return ` <dialog id="order-basket" class="order-basket order-basket-closed">
+  return ` <dialog id="order-basket" class="order-basket">
   <button onclick="closeBasket()" id="close-basket-btn" class="close-basket-btn">
       <img src="./assets/icons/close.svg" alt="Close Icon">
     </button>
@@ -109,7 +109,7 @@ function emptyBasketTemplate() {
 }
 
 function fullBasketTemplate() {
-  return `<dialog id="order-basket" class="order-basket order-basket-closed">
+  return `<dialog id="order-basket" class="order-basket">
   <button onclick="closeBasket()" id="close-basket-btn" class="close-basket-btn">
       <img src="./assets/icons/close.svg" alt="Close Icon">
     </button>
