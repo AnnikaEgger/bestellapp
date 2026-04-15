@@ -1,9 +1,6 @@
 function init() {
   renderItems();
   renderBasket();
-  // if (window.innerWidth < 768) {
-  //   closeBasket();
-  // }
 }
 
 function renderItems() {
