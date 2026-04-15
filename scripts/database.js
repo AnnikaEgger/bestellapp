@@ -110,6 +110,3 @@ let items = [
 ];
 
 let basketItems = [];
-
-// ggf alles in let items; amount auch
-// amount darf nicht weniger als 0 werden

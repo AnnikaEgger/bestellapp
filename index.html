@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="./styles/variables.css" />
     <link rel="stylesheet" href="./styles/standard.css" />
     <link rel="stylesheet" href="./styles/fonts.css" />
-    <link rel="stylesheet" href="./styles/assets.css" />
     <link rel="stylesheet" href="./styles/food.css" />
     <link rel="stylesheet" href="./styles/basket.css" />
     <link rel="stylesheet" href="./styles/confirmation_dialog.css" />
@@ -108,7 +107,10 @@
 
       <dialog id="confirmation-dialog" class="confirmation-dialog">
         <div class="dialog-content-wrapper">
-          <button onclick="closeDialog()" class="close-confirmation-dialog-btn">
+          <button
+            onclick="closeConfirmationDialog()"
+            class="close-confirmation-dialog-btn"
+          >
             <img src="./assets/icons/close.svg" alt="Close Icon" />
           </button>
           <img
@@ -144,12 +146,39 @@
         <button>
           <img src="./assets/icons/takeout.svg" alt="Takeout Icon" />
         </button>
-        <button onclick="toggleOpenBasketDialog()">
-          <img
-            src="./assets/icons/shopping_cart_small.svg"
-            alt="Shopping Cart Icon"
-          />
+        <button class="shopping-cart-btn" onclick="toggleOpenBasketDialog()">
+          <div class="shopping-cart-wrapper">
+            <div class="menubar-items-counter-wrapper">
+              <p id="menubar-items-counter" class="menubar-items-counter">3</p>
+            </div>
+            <img
+              fill="white"
+              src="./assets/icons/shopping_cart_small.svg"
+              alt="Shopping Cart Icon"
+            />
+          </div>
         </button>
+        <!-- <button>
+          <svg src="./assets/icons/home.svg" alt="Home Button"></svg>
+        </button>
+        <button>
+          <svg src="./assets/icons/person.svg" alt="Person Icon"></svg>
+        </button>
+        <button>
+          <svg src="./assets/icons/takeout.svg" alt="Takeout Icon"></svg>
+        </button>
+        <button class="shopping-cart-btn" onclick="toggleOpenBasketDialog()">
+          <div class="shopping-cart-wrapper">
+            <div class="menubar-items-counter-wrapper">
+              <p id="menubar-items-counter" class="menubar-items-counter">3</p>
+            </div>
+            <svg
+              fill="white"
+              src="./assets/icons/shopping_cart_small.svg"
+              alt="Shopping Cart Icon"
+            ></svg>
+          </div>
+        </button> -->
       </nav>
     </div>
   </body>

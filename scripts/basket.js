@@ -1,3 +1,4 @@
+// rendering basket
 function renderBasket(openBasketDialog) {
   let basketWrapper = document.getElementById("basket-wrapper");
 
@@ -17,10 +18,12 @@ function renderBasket(openBasketDialog) {
     calcBasketItemPrice();
     renderBasketItems();
     calcBasketTablePrice();
-    openOrCloseBasket(openBasketDialog);
   }
+  openOrCloseBasket(openBasketDialog);
+  updateMenuItemsCounter();
 }
 
+// opening or closing basket dialog + adding or removing class "order-basket-open"
 function openOrCloseBasket(openBasketDialog) {
   let basket = document.getElementById("order-basket");
 
@@ -37,6 +40,7 @@ function openOrCloseBasket(openBasketDialog) {
   }
 }
 
+// rendering basket item
 function renderBasketItems() {
   for (let index = 0; index < basketItems.length; index++) {
     const BASKET_ITEMS_SECTION = document.getElementById(
@@ -50,6 +54,7 @@ function renderBasketItems() {
   }
 }
 
+// adding new item to basket or increasing amount if it already exists
 function addBasketItem(indexArray, indexObject) {
   let elAlreadyExists = false;
 
@@ -67,10 +72,11 @@ function addBasketItem(indexArray, indexObject) {
     );
   }
 
-  updateBtnAdd();
+  updateBtnAddLoops();
   renderBasket();
 }
 
+// calculating total price of a basket item
 function calcBasketItemPrice() {
   for (let index = 0; index < basketItems.length; index++) {
     basketItems[index].totalPrice =
@@ -78,6 +84,7 @@ function calcBasketItemPrice() {
   }
 }
 
+// calculating subtotal, delivery fee, total
 function calcBasketTablePrice() {
   let subtotal = 0;
   let deliveryFee = 4.99;
@@ -97,30 +104,34 @@ function calcBasketTablePrice() {
   );
 }
 
+// deleting item from basketItems Array
 function deleteBasketItem(basketItemsIndex) {
   basketItems.splice(basketItemsIndex, 1);
 
-  updateBtnAdd();
+  updateBtnAddLoops();
   renderBasket(checkIfBasketDialogOpen());
 }
 
+// increasing amount of item by 1
 function amountPlusOne(basketItemIndex) {
   basketItems[basketItemIndex].amount += 1;
 
-  updateBtnAdd();
+  updateBtnAddLoops();
   renderBasket(checkIfBasketDialogOpen());
 }
 
+// decreasing amount of item by 1, deleting it if amount = 0
 function amountMinusOne(basketItemIndex) {
   if (basketItems[basketItemIndex].amount == 1) {
     deleteBasketItem(basketItemIndex);
   } else {
     basketItems[basketItemIndex].amount -= 1;
-    updateBtnAdd();
+    updateBtnAddLoops();
     renderBasket(checkIfBasketDialogOpen());
   }
 }
 
+// creating a variable to check if dialog is already opened
 function checkIfBasketDialogOpen() {
   let basket = document.getElementById("order-basket");
   let openBasketDialog;
@@ -134,6 +145,7 @@ function checkIfBasketDialogOpen() {
   return openBasketDialog;
 }
 
+// creating a variable to decide whether dialog should be rendered opened or closed
 function toggleOpenBasketDialog() {
   let openBasketDialog;
   let basket = document.getElementById("order-basket");

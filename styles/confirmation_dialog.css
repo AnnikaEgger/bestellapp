@@ -1,11 +1,8 @@
 .confirmation-dialog {
   position: fixed;
-
   top: 35dvh;
   justify-self: center;
-
   padding: 32px 40px;
-
   background-color: var(--grey-dark);
   border-radius: 30px;
   outline: none;

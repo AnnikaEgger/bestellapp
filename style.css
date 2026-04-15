@@ -91,10 +91,8 @@ header img {
 .rating-box {
   display: flex;
   align-items: center;
-
   padding: 4px 4px;
   gap: 8px;
-
   background-color: var(--beige-dark);
   border-radius: 4px;
 }
@@ -129,11 +127,13 @@ footer {
 
 /* #endregion */
 
+/* #region menu-bar */
 .menu-bar {
   position: sticky;
   bottom: 0;
   display: none;
   align-items: center;
+  z-index: 10;
 
   width: 100%;
   height: 80px;
@@ -162,10 +162,40 @@ footer {
   /* background-color: white; */
 }
 
-.menu-bar button img {
+.menu-bar button svg {
+  fill: white;
   width: 22px;
   height: 24px;
 }
+
+.menu-bar svg:hover {
+  fill: red;
+}
+
+.shopping-cart-btn {
+  height: 50px;
+  width: 50px;
+}
+
+.shopping-cart-wrapper {
+  position: relative;
+}
+
+.menubar-items-counter-wrapper {
+  position: absolute;
+  bottom: 18px;
+  left: 28px;
+  align-items: center;
+  justify-content: center;
+  /* padding: 4px; */
+  /* text-align: center; */
+  width: 18px;
+  height: 18px;
+  background-color: var(--beige-light);
+  border-radius: 100%;
+}
+
+/* #endregion */
 
 /* #region responsive */
 
