@@ -98,6 +98,7 @@
 .delete-icon:hover {
   filter: invert(47%) sepia(94%) saturate(1947%) hue-rotate(352deg)
     brightness(96%) contrast(88%);
+  background-color: white;
 }
 
 .amount-btn:hover {

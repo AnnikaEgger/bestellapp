@@ -21,7 +21,7 @@ function renderBasket(openBasketDialog) {
   }
 }
 
-function openOrCloseBasket() {
+function openOrCloseBasket(openBasketDialog) {
   let basket = document.getElementById("order-basket");
 
   if (openBasketDialog == true) {

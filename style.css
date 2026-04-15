@@ -151,6 +151,17 @@ footer {
   border: none;
 }
 
+.menu-bar button:hover {
+  filter: invert(47%) sepia(94%) saturate(1947%) hue-rotate(352deg)
+    brightness(96%) contrast(88%);
+}
+
+.menu-bar button:active {
+  filter: invert(47%) sepia(94%) saturate(1947%) hue-rotate(352deg)
+    brightness(96%) contrast(88%);
+  /* background-color: white; */
+}
+
 .menu-bar button img {
   width: 22px;
   height: 24px;

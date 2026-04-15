@@ -41,13 +41,13 @@ function updateBtnAdd() {
           break;
         } else {
           btnAdd.innerHTML = "Add to Basket";
-          btnAdd.style = "color: rgba(54, 53, 52, 1)";
+          btnAdd.style = "color: ''";
         }
       }
 
       if (basketItems.length == 0) {
         btnAdd.innerHTML = "Add to Basket";
-        btnAdd.style = "color: rgba(54, 53, 52, 1)";
+        btnAdd.style = "color: ''";
       }
     }
   }
@@ -61,7 +61,7 @@ function submitOrder() {
   updateBtnAdd();
   confirmationDialog.showModal();
 
-  basket.classList.add("order-basket-closed");
+  basket.classList.remove("order-basket-open");
   basket.close();
 
   confirmationDialog.classList.add("confirmation-dialog-closed");

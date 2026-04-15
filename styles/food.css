@@ -135,6 +135,25 @@
   }
 }
 
+@media screen and (min-width: 769px) and (max-width: 1000px) {
+  .burger-section .zoom-img-container img {
+    object-position: -80px -50px;
+    zoom: 1.5;
+  }
+
+  .salad-section .zoom-img-container img {
+    object-position: -60px 0px;
+  }
+
+  /* .black-burger {
+    object-position: -50px 0px;
+  } */
+
+  .dish-container-left-left {
+    width: 33ch;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .dish-container {
     flex-direction: column;
@@ -191,6 +210,11 @@
   .food-sections-seperator {
     justify-content: center;
     gap: 8px;
+  }
+
+  .food-sections-seperator img {
+    width: 60px;
+    height: 60px;
   }
 }
 
