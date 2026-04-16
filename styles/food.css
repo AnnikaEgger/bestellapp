@@ -2,6 +2,10 @@
   position: relative;
 }
 
+.section-jump {
+  height: 80px;
+}
+
 .food-sections-seperator {
   display: flex;
   align-items: center;
@@ -27,8 +31,12 @@
   display: flex;
   flex-direction: column;
   margin-top: 32px;
-  margin-bottom: 64px;
+  /* margin-bottom: 64px; */
   gap: 16px;
+}
+
+.salad-section .article-section {
+  margin-bottom: 80px;
 }
 
 .dish-container {
@@ -211,6 +219,14 @@
   .food-sections-seperator img {
     width: 60px;
     height: 60px;
+  }
+
+  .section-jump {
+    height: 48px;
+  }
+
+  .salad-section .article-section {
+    margin-bottom: 48px;
   }
 }
 

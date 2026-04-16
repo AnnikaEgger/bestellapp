@@ -26,8 +26,8 @@ header {
   align-items: center;
   justify-content: space-between;
 
-  background-color: rgba(231, 108, 31, 0.9);
-  height: 100px;
+  background-color: rgba(231, 108, 31, 0.95);
+  height: 80px;
   z-index: 1;
 }
 
@@ -46,11 +46,11 @@ header img {
 /* #region section start */
 
 .start {
-  height: min(100dvh, 1000px);
+  height: min(calc(100dvh - 80px), 920px);
 }
 
 .hero {
-  height: 650px;
+  height: 550px;
   margin: 0px var(--content-limitation);
   background-image: url(./assets/img/hero.png);
   background-repeat: no-repeat;
@@ -60,7 +60,7 @@ header img {
 
 .burger-logo {
   position: absolute;
-  top: 500px;
+  top: 450px;
 
   display: flex;
   justify-self: center;
@@ -78,8 +78,7 @@ header img {
   align-items: center;
   justify-content: center;
 
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 100px;
 }
 
 .headline-rating-container {
@@ -255,7 +254,6 @@ footer {
   footer {
     flex-direction: column-reverse;
     gap: 10px;
-    margin-top: 64px;
   }
   .menu-bar {
     display: flex;

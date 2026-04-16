@@ -1,26 +1,36 @@
 // rendering basket
 function renderBasket(openBasketDialog) {
-  let basketWrapper = document.getElementById("basket-wrapper");
-
   if (basketItems.length == 0) {
-    basketWrapper.innerHTML = emptyBasketTemplate();
-
-    let basket = document.getElementById("order-basket");
-    basket.classList.remove("order-basket--full");
-    basket.classList.add("order-basket--empty");
+    renderEmptyBasket();
   } else if (basketItems.length > 0) {
-    basketWrapper.innerHTML = fullBasketTemplate();
-
-    let basket = document.getElementById("order-basket");
-    basket.classList.remove("order-basket--empty");
-    basket.classList.add("order-basket--full");
-
-    calcBasketItemPrice();
-    renderBasketItems();
-    calcBasketTablePrice();
+    renderFullBasket();
   }
   openOrCloseBasket(openBasketDialog);
   updateMenuItemsCounter();
+}
+
+// rendering emmpty basket
+function renderEmptyBasket() {
+  let basketWrapper = document.getElementById("basket-wrapper");
+  basketWrapper.innerHTML = emptyBasketTemplate();
+
+  let basket = document.getElementById("order-basket");
+  basket.classList.remove("order-basket--full");
+  basket.classList.add("order-basket--empty");
+}
+
+// rendering basket with items inside
+function renderFullBasket() {
+  let basketWrapper = document.getElementById("basket-wrapper");
+  basketWrapper.innerHTML = fullBasketTemplate();
+
+  let basket = document.getElementById("order-basket");
+  basket.classList.remove("order-basket--empty");
+  basket.classList.add("order-basket--full");
+
+  calcBasketItemPrice();
+  renderBasketItems();
+  calcBasketTablePrice();
 }
 
 // opening or closing basket dialog + adding or removing class "order-basket-open"
@@ -87,19 +97,19 @@ function calcBasketItemPrice() {
 // calculating subtotal, delivery fee, total
 function calcBasketTablePrice() {
   let subtotal = 0;
-  let deliveryFee = 4.99;
+  const DELIVERY_FEE = 4.99;
   let total = 0;
 
   for (let index = 0; index < basketItems.length; index++) {
     subtotal += basketItems[index].totalPrice;
   }
 
-  total = subtotal + deliveryFee;
+  total = subtotal + DELIVERY_FEE;
 
   const CALC_PRICE_SECTION = document.getElementById("calc-price-section");
   CALC_PRICE_SECTION.innerHTML = basketTableTemplate(
     subtotal,
-    deliveryFee,
+    DELIVERY_FEE,
     total,
   );
 }
