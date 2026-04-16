@@ -69,9 +69,12 @@
   align-items: center;
 }
 
-.delete-icon img {
-  width: 16px;
-  height: 18px;
+.delete-icon svg {
+  width: 24px;
+  height: 26px;
+  padding: 4px;
+  fill: var(--grey-dark);
+  border-radius: 5px;
 }
 
 .delete-icon {
@@ -79,9 +82,9 @@
   border-radius: 4px;
 }
 
-.delete-icon:hover {
-  filter: invert(47%) sepia(94%) saturate(1947%) hue-rotate(352deg)
-    brightness(96%) contrast(88%);
+.delete-icon svg:hover {
+  fill: var(--orange);
+  background-color: white;
 }
 
 .amount-btn {
